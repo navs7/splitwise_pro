@@ -1,20 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:splitwise_pro/src/utils/theme/theme.dart';
+import 'package:splitwise_pro/src/features/authentication/screens/splash_screen/splash_screen.dart';
+
 
 void main() {
   runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}): super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return GetMaterialApp(
+      theme: MyTheme.lightwaTheme,
+      darkTheme: MyTheme.darkwaTheme,
+      themeMode: ThemeMode.system,
+      home: MySplashScreen(),
+      );
   }
 }
+
+
+// class AppHome extends StatelessWidget{
+//   const AppHome({Key? key}):super(key:key);
+
+//   @override
+//   Widget build(BuildContext context){
+//     return Scaffold(
+//       appBar: AppBar(title: const Text(".appable/")),
+//       body: const Center(child: Text("Home Page"),)
+//     );
+//   }
+// }
