@@ -18,19 +18,7 @@ class MainApp extends StatelessWidget {
       darkTheme: MyTheme.darkwaTheme,
       themeMode: ThemeMode.system,
       home: MySplashScreen(),
+      debugShowCheckedModeBanner: false,
       );
   }
 }
-
-
-// class AppHome extends StatelessWidget{
-//   const AppHome({Key? key}):super(key:key);
-
-//   @override
-//   Widget build(BuildContext context){
-//     return Scaffold(
-//       appBar: AppBar(title: const Text(".appable/")),
-//       body: const Center(child: Text("Home Page"),)
-//     );
-//   }
-// }

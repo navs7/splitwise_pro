@@ -12,6 +12,8 @@ dependencies:
   flutter_native_splash: ^2.3.9
   google_fonts: ^6.1.0
   get: ^4.6.6
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.1.0
 
 flutter_native_splash:
   color: "#f7f6f1"
@@ -28,6 +30,7 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/images/blue.png
-    - assets/images/bill.png
+    - assets/images/
+    - assets/images/splash_images/
+    - assets/images/onboarding_images/
   uses-material-design: true
