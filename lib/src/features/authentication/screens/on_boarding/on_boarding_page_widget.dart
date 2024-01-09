@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:splitwise_pro/src/constants/images_strings.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
-import 'package:splitwise_pro/src/constants/text_strings.dart';
 import 'package:splitwise_pro/src/features/authentication/models/on_boarding_model.dart';
 
 
