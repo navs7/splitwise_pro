@@ -6,9 +6,15 @@ class MyTextTheme{
     displayLarge: GoogleFonts.montserrat(
       color: Colors.black87,
     ),
-    bodyLarge: GoogleFonts.roboto(
+    bodyLarge: GoogleFonts.montserrat(
+      color: Colors.black87,
+    ),
+    displayMedium: GoogleFonts.montserrat(
       color: Colors.black54,
-    ), 
+    ),
+    bodyMedium: GoogleFonts.montserrat(
+      color: Colors.black87,
+    ),  
   );
   static TextTheme myDarkTextTheme = TextTheme(
     displayLarge: GoogleFonts.montserrat(

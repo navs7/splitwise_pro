@@ -6,7 +6,7 @@ import 'package:splitwise_pro/src/constants/colors.dart';
 import 'package:splitwise_pro/src/features/authentication/controllers/on_boarding_controller.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  OnBoardingScreen({Key? key}) : super(key: key);
+  const OnBoardingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

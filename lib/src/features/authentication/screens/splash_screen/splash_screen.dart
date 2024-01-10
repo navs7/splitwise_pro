@@ -20,14 +20,14 @@ class MySplashScreen extends StatelessWidget {
           Obx(
             () => AnimatedPositioned(
                 duration: const Duration(milliseconds: 1600),
-                top: splashController.animate.value ? -50 : -100,
+                top: splashController.animate.value ? -80 : -100,
                 left: splashController.animate.value ? -50 : -100,
                 child: const Image(image: AssetImage(mySplashTopIcon))),
           ),
           Obx(
             () => AnimatedPositioned(
               duration: const Duration(milliseconds: 1600),
-              top: splashController.animate.value ? 80 : 0,
+              top: splashController.animate.value ? 100 : 0,
               left: splashController.animate.value ? myDefaultSize : -80,
               child: AnimatedOpacity(
                 duration: const Duration(milliseconds: 1600),
@@ -41,7 +41,7 @@ class MySplashScreen extends StatelessWidget {
                     ),
                     Text(
                       myAppTagLine,
-                      style: Theme.of(context).textTheme.displaySmall,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ],
                 ),
@@ -52,7 +52,7 @@ class MySplashScreen extends StatelessWidget {
             () => AnimatedPositioned(
                 duration: const Duration(milliseconds: 1600),
                 bottom: splashController.animate.value ? 220 : 0,
-                child: Image(image: AssetImage(mySplashImage))),
+                child: const Image(image: AssetImage(mySplashImage))),
           ),
           Obx(
             () => AnimatedPositioned(
