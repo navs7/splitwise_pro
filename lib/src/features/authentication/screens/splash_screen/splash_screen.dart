@@ -1,71 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:splitwise_pro/src/common_widgets/fade_in_animation/animation_design.dart';
+import 'package:splitwise_pro/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
 import 'package:splitwise_pro/src/constants/colors.dart';
 import 'package:splitwise_pro/src/constants/images_strings.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
 import 'package:splitwise_pro/src/constants/text_strings.dart';
-import 'package:splitwise_pro/src/features/authentication/controllers/splash_screen_controller.dart';
-// import 'package:splitwise_pro/src/utils/theme/theme.dart';
+import 'package:splitwise_pro/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
 
 class MySplashScreen extends StatelessWidget {
-  MySplashScreen({Key? key}) : super(key: key);
-  final splashController = Get.put(MySplashScreenController());
+  const MySplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    splashController.startAnimation();
+    final controller = Get.put(FadeInAnimationController());
+    controller.startSplashAnimation();
     return Scaffold(
       body: Stack(
         children: [
-          Obx(
-            () => AnimatedPositioned(
-                duration: const Duration(milliseconds: 1600),
-                top: splashController.animate.value ? -80 : -100,
-                left: splashController.animate.value ? -50 : -100,
-                child: const Image(image: AssetImage(mySplashTopIcon))),
+          MyFadeInAnimation(
+            durationInMs: 1600,
+            animate: MyAnimatePosition(
+              topAfter: -80,
+              topBefore: -100,
+              leftAfter: -50,
+              leftBefore: -100,
+            ),
+            child: const Image(image: AssetImage(mySplashTopIcon)),
           ),
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
-              top: splashController.animate.value ? 100 : 0,
-              left: splashController.animate.value ? myDefaultSize : -80,
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 1600),
-                opacity: splashController.animate.value ? 1 :0,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      myAppName,
-                      style: Theme.of(context).textTheme.displayMedium,
-                    ),
-                    Text(
-                      myAppTagLine,
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                  ],
+          MyFadeInAnimation(
+            durationInMs: 1600,
+            animate: MyAnimatePosition(
+              topAfter: 100,
+              topBefore: 0,
+              leftAfter: myDefaultSize,
+              leftBefore: -80,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  myAppName,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
-              ),
+                Text(
+                  myAppTagLine,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ],
             ),
           ),
-          Obx(
-            () => AnimatedPositioned(
-                duration: const Duration(milliseconds: 1600),
-                bottom: splashController.animate.value ? 220 : 0,
-                child: const Image(image: AssetImage(mySplashImage))),
+          MyFadeInAnimation(
+            durationInMs: 1600,
+            animate: MyAnimatePosition(
+              bottomAfter: 220,
+              bottomBefore: 0,
+            ),
+            child: const Image(image: AssetImage(mySplashImage)),
           ),
-          Obx(
-            () => AnimatedPositioned(
-              duration: const Duration(milliseconds: 1600),
-              bottom: splashController.animate.value ? 40 : 0,
-              right: myDefaultSize,
-              child: Container(
-                width: mySplashContainerSize,
-                height: mySplashContainerSize,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  color: tPrimaryColor,
-                ),
+          MyFadeInAnimation(
+            durationInMs: 1600,
+            animate: MyAnimatePosition(
+              bottomAfter: 40,
+              bottomBefore: 0,
+              rightAfter: myDefaultSize,
+              rightBefore: 0,
+            ),
+            child: Container(
+              width: mySplashContainerSize,
+              height: mySplashContainerSize,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: tPrimaryColor,
               ),
             ),
           ),
