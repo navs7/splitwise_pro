@@ -34,4 +34,5 @@ flutter:
     - assets/images/splash_images/
     - assets/images/onboarding_images/
     - assets/images/welcome_images/
+    - assets/logo/
   uses-material-design: true

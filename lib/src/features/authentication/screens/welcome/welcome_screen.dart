@@ -7,6 +7,8 @@ import 'package:splitwise_pro/src/constants/colors.dart';
 import 'package:splitwise_pro/src/constants/images_strings.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
 import 'package:splitwise_pro/src/constants/text_strings.dart';
+import 'package:splitwise_pro/src/features/authentication/screens/login/login_screen.dart';
+import 'package:splitwise_pro/src/features/authentication/screens/signup/signup_screen.dart';
 
 class MyWelcomeScreen extends StatelessWidget {
   const MyWelcomeScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class MyWelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(FadeInAnimationController());
     controller.startWelcomeAnimation();
-    
+
     var height = MediaQuery.of(context).size.height;
     var brightness = MediaQuery.of(context).platformBrightness;
     final isDarkMode = brightness == Brightness.dark;
@@ -41,7 +43,7 @@ class MyWelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image(image: const AssetImage(myWelcomeImage), height: height * 0.5),
+                  Image(image: const AssetImage(myWelcomeHomeImage), height: height * 0.5),
                   Column(
                     children: [
                       Text(
@@ -59,7 +61,7 @@ class MyWelcomeScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: (){}, 
+                          onPressed: () => Get.to(()=> const LoginScreen()),
                           
                           child: const Text("LOGIN"),
                           ),
@@ -67,7 +69,7 @@ class MyWelcomeScreen extends StatelessWidget {
                       const SizedBox(width: 10.0,),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: ()=> Get.to(()=> const SignupScreen()),
                           
                           child: const Text("SIGNUP"),
                           ),

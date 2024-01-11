@@ -14,6 +14,9 @@ class MyTextTheme{
     ),
     bodyMedium: GoogleFonts.montserrat(
       color: Colors.black87,
+    ),
+    titleLarge: GoogleFonts.montserrat(
+      color: Colors.black54,
     ),  
   );
   static TextTheme myDarkTextTheme = TextTheme(
