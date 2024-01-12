@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
 import 'package:splitwise_pro/src/constants/text_strings.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class LoginFormWidget extends StatelessWidget {
+  const LoginFormWidget({
     super.key,
   });
 

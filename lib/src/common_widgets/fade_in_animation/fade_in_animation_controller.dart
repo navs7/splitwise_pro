@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:splitwise_pro/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
+// import 'package:splitwise_pro/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 import 'package:splitwise_pro/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 class FadeInAnimationController extends GetxController{

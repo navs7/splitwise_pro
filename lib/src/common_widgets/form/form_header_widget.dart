@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:splitwise_pro/src/constants/images_strings.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
-import 'package:splitwise_pro/src/constants/text_strings.dart';
 
-class LoginHeaderWidget extends StatelessWidget {
-  const LoginHeaderWidget({
+class FormHeaderWidget extends StatelessWidget {
+  const FormHeaderWidget({
     super.key,
     required this.size,
+    required this.image,
+    required this.subtitle,
+    required this.title,
   });
 
   final Size size;
+  final String image, title, subtitle;
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +22,14 @@ class LoginHeaderWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image(
-              image: const AssetImage(myWelcomeImage),
+              image: AssetImage(image),
               height: size.height * 0.2,
             ),
           ],
         ),
-        const SizedBox(height: myDefaultSize-20),
-        Text(myLoginTitle,
-            style: Theme.of(context).textTheme.titleLarge),
-        Text(myLoginSubtitle,
-            style: Theme.of(context).textTheme.bodyMedium),
+        const SizedBox(height: myDefaultSize - 20),
+        Text(title, style: Theme.of(context).textTheme.titleLarge),
+        Text(subtitle, style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
   }

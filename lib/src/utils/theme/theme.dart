@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:splitwise_pro/src/utils/theme/widget_theme/elevated_button_theme.dart';
 import 'package:splitwise_pro/src/utils/theme/widget_theme/outlined_button_theme.dart';
+import 'package:splitwise_pro/src/utils/theme/widget_theme/text_field_theme.dart';
 import 'package:splitwise_pro/src/utils/theme/widget_theme/text_theme.dart';
 
 class MyTheme{
@@ -24,6 +25,7 @@ MyTheme._(); // * user cant access theme using instance of this class, thats why
     textTheme: MyTextTheme.myLightTextTheme,
     outlinedButtonTheme: MyOutlinedButtonTheme.myLightOutlineButtonTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.myLightElevatedButtonTheme,
+    inputDecorationTheme: MyTextFieldFormTheme.myLightInputDecorationTheme,
   );
   static const int myGreen = 0xFF00FF00;
 
@@ -33,5 +35,6 @@ MyTheme._(); // * user cant access theme using instance of this class, thats why
     textTheme: MyTextTheme.myDarkTextTheme,
     outlinedButtonTheme: MyOutlinedButtonTheme.myDarkOutlineButtonTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.myDarkElevatedButtonTheme,
+    inputDecorationTheme: MyTextFieldFormTheme.myDarkInputDecorationTheme,
   );
 }

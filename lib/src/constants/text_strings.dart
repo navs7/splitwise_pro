@@ -21,7 +21,12 @@ const String myWelcomeSubtitle = "Keep track of your shared expenses and balance
 const String myLoginTitle = "Welcome back";
 const String myLoginSubtitle = "Make it work";
 const String myRememberMe = "Remember me?";
-const String myAlreadyHaveAccount = "Already have an Account?";
+const String myAlreadyHaveAccount = "Already have an Account? ";
+
+//signup screen
+const String mySignupTitle = "Get on board!";
+const String mySignupSubtitle = "Create your profile to start your journey with us...";
+const String mySignupAlreadyAccount = "Already have an account? ";
 
 //random
 const String myEmail = "Email";
@@ -30,3 +35,5 @@ const String myForgetPassword = "Forgot Password?";
 const String mySignInWithGoogle = "Sign-in with Google";
 const String myLogin = "LOGIN";
 const String mySignup = "Signup";
+const String myFullName = "Full Name";
+const String myPhoneNo = "Phone No.";
