@@ -37,3 +37,12 @@ const String myLogin = "LOGIN";
 const String mySignup = "Signup";
 const String myFullName = "Full Name";
 const String myPhoneNo = "Phone No.";
+
+//forgot password screen
+const String myForgetPasswordTitle = "Make Selection!";
+const String myForgetPasswordSubTitle = "Select one of the options given below to reset your password.";
+const String myResetViaEmail = "Reset via E-Mail Verification.";
+const String myResetViaPhone = "Reset via Phone Verification.";
+
+const String myForgetPhoneSubTitle = "Enter your registered Phone No to receive OTP";
+const String myForgetMailSubTitle = "Enter your registered E-Mail to receive OTP";

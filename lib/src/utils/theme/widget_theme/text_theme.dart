@@ -18,6 +18,9 @@ class MyTextTheme{
     titleLarge: GoogleFonts.montserrat(
       color: Colors.black54,
     ),  
+    headlineMedium: GoogleFonts.montserrat(
+      color: Colors.black54,
+    ),  
   );
   static TextTheme myDarkTextTheme = TextTheme(
     displayLarge: GoogleFonts.montserrat(

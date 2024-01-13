@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:splitwise_pro/src/constants/sizes.dart';
 import 'package:splitwise_pro/src/constants/text_strings.dart';
+import 'package:splitwise_pro/src/features/authentication/screens/forgot_password/forgot_password_options/forgot_password_modal_sheet.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({
@@ -11,8 +12,7 @@ class LoginFormWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
         child: Container(
-      padding:
-          const EdgeInsets.symmetric(vertical: myFormHeight - 10),
+      padding: const EdgeInsets.symmetric(vertical: myFormHeight - 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,16 +40,19 @@ class LoginFormWidget extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                ForgotPasswordScreen.buildShowModalSheet(context);
+              },
               child: const Text(myForgetPassword),
             ),
           ),
           SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                  onPressed: () {}, child: const Text(myLogin))),
+              child:
+                  ElevatedButton(onPressed: () {}, child: const Text(myLogin))),
         ],
       ),
     ));
   }
+
 }

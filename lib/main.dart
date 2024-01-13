@@ -17,7 +17,9 @@ class MainApp extends StatelessWidget {
       theme: MyTheme.lightwaTheme,
       darkTheme: MyTheme.darkwaTheme,
       themeMode: ThemeMode.system,
-      home: MySplashScreen(),
+      home: const MySplashScreen(),
+      defaultTransition: Transition.leftToRightWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
       debugShowCheckedModeBanner: false,
       );
   }

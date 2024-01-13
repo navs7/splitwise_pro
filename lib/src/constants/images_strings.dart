@@ -13,3 +13,6 @@ const String myWelcomeHomeImage = 'assets/images/welcome_images/welcome-home.png
 
 //logo
 const String myGoogleLogo = 'assets/logo/google.png';
+
+//forgot password
+const String myForgotPasswordImage = 'assets/images/forgot_password_images/forgot_password.png';

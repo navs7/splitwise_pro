@@ -35,4 +35,5 @@ flutter:
     - assets/images/onboarding_images/
     - assets/images/welcome_images/
     - assets/logo/
+    - assets/images/forgot_password_images/
   uses-material-design: true

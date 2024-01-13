@@ -11,24 +11,22 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
 
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(myDefaultSize),
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 FormHeaderWidget(
-                  size: size,
                   image: myWelcomeImage,
                   subtitle: mySignupSubtitle,
                   title: mySignupTitle,
                 ),
-                const SignUpFormWidget(),
-                const SignupFooterWidget(),
+                SignUpFormWidget(),
+                SignupFooterWidget(),
               ],
             ),
           ),
